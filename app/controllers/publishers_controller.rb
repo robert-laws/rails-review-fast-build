@@ -9,7 +9,7 @@ class PublishersController < ApplicationController
 
   def new
     @publisher = Publisher.new
-    @publisher.office_locations.build
+    2.times { @publisher.office_locations.build }
   end
 
   def create
