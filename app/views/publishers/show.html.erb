@@ -1,0 +1,21 @@
+<h1>Publisher Details</h1>
+
+<h4>
+  Name: <%= @publisher.name %>
+</h4>
+
+<p>
+  Number of Employees: <%= @publisher.employees %>
+</p>
+
+<p>
+  Office Locations:
+</p>
+
+<ul>
+  <% @publisher.office_locations.each do |office_location| %>
+    <li>
+      <%= office_location.city %>
+    </li>
+  <% end %>
+</ul>

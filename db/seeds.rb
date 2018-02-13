@@ -8,6 +8,8 @@
 
 Book.delete_all
 Author.delete_all
+OfficeLocation.delete_all
+Publisher.delete_all
 
 @author_1 = Author.create(name: "Bob Cobb", age: 43)
 @author_2 = Author.create(name: "Hal Hope", age: 27)
@@ -27,3 +29,12 @@ Book.create(title: "Once I went Outside", pages: 31, publication_date: DateTime.
 Book.create(title: "Dancing Melodies", pages: 118, publication_date: DateTime.new(2015, 6, 5, 0, 0, 0), author: @author_3)
 Book.create(title: "Artful Escapes", pages: 127, publication_date: DateTime.new(2009, 9, 7, 0, 0, 0), author: @author_4)
 Book.create(title: "Managing Work Parties", pages: 62, publication_date: DateTime.new(2005, 10, 23, 0, 0, 0), author: @author_1)
+
+@publisher_1 = Publisher.create(name: "Mansion Books", employees: 34)
+@publisher_2 = Publisher.create(name: "House of Paper", employees: 12)
+@publisher_3 = Publisher.create(name: "Oddball Publishers", employees: 74)
+
+OfficeLocation.create(city: "London", publisher: @publisher_1)
+OfficeLocation.create(city: "Paris", publisher: @publisher_2)
+OfficeLocation.create(city: "New York", publisher: @publisher_3)
+OfficeLocation.create(city: "Chicago", publisher: @publisher_1)

@@ -1,0 +1,13 @@
+<h1>All Publishers</h1>
+
+<ul>
+  <% @publishers.each do |publisher| %>
+    <li>
+      <%= link_to publisher.name, publisher_path(publisher) %>
+    </li>
+  <% end %>
+</ul>
+
+<hr>
+
+<%= link_to 'Create a New Publisher', new_publisher_path %>
